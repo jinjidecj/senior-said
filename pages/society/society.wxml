@@ -1,0 +1,299 @@
+<view scroll-y="false"  style='height:{{winHeight}}'>
+
+<view class="society">
+  <view class="top">
+    <image class='searchImg' src='../../img/search.png' bindtap='searchClick'></image>
+    <view class="topCenter">
+      <view class="top-item">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="top-item">
+        <image class='topCenterImg' src='../../img/next.png'></image>
+      </view>
+    </view>
+    <view class="edit-view">
+      <image class='editImg' src='../../img/edit.png' bindtap='button'></image>
+    </view>
+
+  </view>
+
+  <view class='cen-item'>
+    <scroll-view scroll-x='true' class='tab-h' scroll-left='{{scrollLeft}}'>
+      <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">社区</view>
+      <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">收藏</view>
+    </scroll-view>
+    <view class='todaySpecial'>
+      <view class='left-text-specif '>
+        <text>职说头条</text>
+      </view>
+      <swiper class='swiper-css' autoplay="true" interval="3000" duration="1000" bindtap='clickSwiper'>
+        <swiper-item>
+          <view class='swiper-item-css'>
+            <view>
+              <text>{{swipertext1}}</text>
+            </view>
+
+            <view>
+              <text>{{swipertext2}}</text>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class='swiper-item-css'>
+            <view>
+              <text>{{swipertext3}}</text>
+            </view>
+            <view>
+              <text>{{swipertext4}}</text>
+            </view>
+          </view>
+
+        </swiper-item>
+      </swiper>
+    </view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">
+          <block wx:for="{{question}}" wx:key="*this">
+            <view class="item" bindtap='clickItem'>
+
+              <view class="item-left">
+                <view class="subitemimg">
+                  <image src="../../img/header/bb.png" class="item-image"></image>
+                </view>
+              </view>
+
+              <view class="item-right">
+                <view class="subitemtext">
+                  <view class="subsubitem">
+                    <view>
+                      <text class="item-title">马化腾</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <text class="item-title smalltext">腾讯产品总监</text>
+                    </view>
+                    <view>
+                      <text class="item-title bigtext">大数据实战：知乎百万用户分析</text>
+                    </view>
+                  </view>
+                  <view>
+                    <image class='right-img' src='../../img/specific.png'></image>
+                  </view>
+
+                  <view class='bottom-item'>
+                    <text>{{date}}</text>
+                    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                    <image class='heart-img' src='../../img/heart.png'></image>
+                    <text class='smalltext'>1000</text>
+                    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                    <image class='heart-img' src='../../img/command.png'></image>
+                    <text class='smalltext'>1000</text>
+                  </view>
+                </view>
+
+
+
+              </view>
+
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">
+          <block wx:for="{{answer}}" wx:key="*this">
+            <view class="item" bindtap='clickItem'>
+
+              <view class="item-left">
+                <view class="subitemimg">
+                  <image src="../../img/header/cc.png" class="item-image"></image>
+                </view>
+              </view>
+
+              <view class="item-right">
+                <view class="subitemtext">
+                  <view class="subsubitem">
+                    <view>
+                      <text class="item-title">马云</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <text class="item-title smalltext">阿里巴巴产品总监</text>
+                    </view>
+                    <view>
+                      <text class="item-title bigtext">大数据实战：阿里百万用户分析</text>
+                    </view>
+                  </view>
+                  <view>
+                    <image class='right-img' src='../../img/specific.png'></image>
+                  </view>
+
+                  <view class='bottom-item'>
+                    <text>{{date}}</text>
+                    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                    <image class='heart-img' src='../../img/heart.png'></image>
+                    <text class='smalltext'>1000</text>
+                    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                    <image class='heart-img' src='../../img/command.png'></image>
+                    <text class='smalltext'>1000</text>
+                  </view>
+                </view>
+
+
+
+              </view>
+
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+
+
+  <!-- <view class="contain">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="selection">
+            <block wx:for="{{list}}" wx:for-index="id">
+              <view class="item" bindtap='clickItem'>
+
+                <view class="item-left">
+                  <view class="subitemimg">
+                    <image src="../../img/header/bb.png" class="item-image"></image>
+                  </view>
+                </view>
+
+                <view class="item-right">
+                  <view class="subitemtext">
+                    <view class="subsubitem">
+                      <view>
+                        <text class="item-title">马化腾</text>
+                        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                        <text class="item-title smalltext">腾讯产品总监</text>
+                      </view>
+                      <view>
+                        <text class="item-title bigtext">大数据实战：知乎百万用户分析</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image class='right-img' src='../../img/specific.png'></image>
+                    </view>
+
+                    <view class='bottom-item'>
+                      <text>{{date}}</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <image class='heart-img' src='../../img/heart.png'></image>
+                      <text class='smalltext'>1000</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <image class='heart-img' src='../../img/command.png'></image>
+                      <text class='smalltext'>1000</text>
+                    </view>
+                  </view>
+
+
+
+                </view>
+
+              </view>
+            </block>
+          </view>
+
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="selection">
+            <block wx:for="{{list}}" wx:for-index="id">
+              <view class="item" bindtap='clickItem'>
+
+                <view class="item-left">
+                  <view class="subitemimg">
+                    <image src="../../img/header/cc.png" class="item-image"></image>
+                  </view>
+                </view>
+
+                <view class="item-right">
+                  <view class="subitemtext">
+                    <view class="subsubitem">
+                      <view>
+                        <text class="item-title">马云</text>
+                        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                        <text class="item-title smalltext">阿里巴巴产品总监</text>
+                      </view>
+                      <view>
+                        <text class="item-title bigtext">大数据实战：阿里百万用户分析</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image class='right-img' src='../../img/specific.png'></image>
+                    </view>
+
+                    <view class='bottom-item'>
+                      <text>{{date}}</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <image class='heart-img' src='../../img/heart.png'></image>
+                      <text class='smalltext'>1000</text>
+                      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                      <image class='heart-img' src='../../img/command.png'></image>
+                      <text class='smalltext'>1000</text>
+                    </view>
+                  </view>
+
+
+
+                </view>
+
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <button type="primary" plain="true" bindtap="confimBtu">测试：回到开始页面</button>
+  </view> -->
+
+
+  <modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="modalOk" confirmText="">
+    <view class="dew">
+      <view class='dew-item1' bindtap='editarticle'>
+        <view class='left-text'>
+          <text>文章</text>
+        </view>
+        <view class='right-img'>
+          <image src="../../img/right.png" class='right-img-style'></image>
+        </view>
+      </view>
+
+      <view class='dew-item2' bindtap='editquestion'>
+        <view class='left-text'>
+          <text>提问</text>
+        </view>
+        <view class='right-img'>
+          <image src="../../img/right.png" class='right-img-style'></image>
+        </view>
+      </view>
+
+      <view class='dew-item3'>
+        <view class='cancle-item'>
+          <image src='../../img/cancel.png' class='cancle-img' bindtap='modalOk'></image>
+        </view>
+      </view>
+
+    </view>
+  </modal>
+
+</view>
+</view>

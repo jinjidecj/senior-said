@@ -1,0 +1,62 @@
+<view class="content">
+  <view class='work'>
+
+    <view class='text'>
+      <text class='type-text'>研发/产品/运营</text>
+    </view>
+    <view  class='text'>
+      <text>SNG社交事业群（部门）</text>
+    </view>
+    <view class='text'>
+      <text>应届毕业生/本科/实习  可转正</text>
+    </view>
+    <view class='text'>
+      <text>200/天  5天/周  至少三个月</text>
+    </view>
+    
+  </view>
+  <view class='company-info'>
+      <view> 
+        <image src='../../img/location.png' class='location-img'></image>
+      </view>
+      <view class='locals'>
+        <view class='text'><text>深圳市腾讯计算机系统有限公司</text></view>
+        <view class='text'><text>北京-XXXXXXXXXXX-XXXX</text></view>
+        <view class='text'><text>腾讯大楼-3层</text></view>
+        
+      </view>
+    </view>
+  <view class='emp'>
+    <view class='text'>
+      <text class='type-text'>职位发布者</text>
+    </view> 
+    <navigator url='/pages/personalMessage/personalMessage'>
+    <view class='empMessage'>
+      <view class='emp-img-view'>
+        <image src='../../img/header/gg.png' class='emp-img'></image>
+      </view>
+
+      <view class="emp-message">
+        <view class='text'>
+          <text>马化腾</text>
+        </view>
+        <view class='text'>
+          <text>腾讯高级产品经理</text>
+        </view>
+      </view>
+
+      <view class='emp-more'>
+        <text>详细信息</text>
+      </view>
+    </view>
+    </navigator>
+  </view>
+  <view class='work-detail'>
+    <view class='text'>
+      <text class='type-text'>职位详情</text>
+    </view> 
+     <view class='text'>
+      <text> 内容</text>
+    </view> 
+  </view>
+</view>

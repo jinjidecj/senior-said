@@ -1,0 +1,18 @@
+.smalltext {
+  font-size: 14px;
+  color: #787878;
+}
+.page-myresume{
+  display: flex;
+  flex-direction: column;
+}
+.notice-text{
+  padding-top: 300rpx;
+  text-align: center;
+}
+.button-view{
+  padding-top: 100rpx;
+ margin:0 auto;
+width:30%;
+
+}

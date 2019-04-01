@@ -1,0 +1,102 @@
+<view class='contain'>
+  <view class='title'>
+    <view class='text'>
+      <text class='type-text'>大数据实战：知乎百万用户分析</text>
+    </view>
+  </view>
+  <view class='author'>
+    <navigator url='/pages/personalMessage/personalMessage'>
+      <view class='empMessage'>
+        <view class='emp-img-view'>
+          <image src='../../img/header/ff.png' class='emp-img'></image>
+        </view>
+        <view class="emp-message">
+          <view class='text'>
+            <text>马化腾</text>
+          </view>
+          <view class='text'>
+            <text class='smalltext'>腾讯高级产品经理</text>
+          </view>
+        </view>
+        <view class='article-time'>
+          <text class='smalltext'>2018-04-06</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class='content'>
+    <text class='contentText'>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算法 [1]  。
+区块链（Blockchain）是比特币的一个重要概念，火币网联合清华大学五道口金融学院互联网金融实验室、新浪科技发布的《2014—2016全球比特币发展研究报告》提到区块链是比特币的底层技术和基础架构 [2]  。它本质上是一个去中心化的数据库，同时作为比特币的底层技术。区块链是一串使用密码学方法相关联产生的数据块，每一个数据块中包含了一次比特币网络交易的信息，用于验证其信息的有效性（防伪）和生成下一个区块
+    </text>
+  </view>
+  <view class='bottom-function'>
+    <view class='love'>
+      <view>
+        <image src='../../img/article/heart.png' class='img'></image>
+      </view>
+      <view class='textview'>
+        <text class='smalltext'>10000</text>
+      </view>
+    </view>
+    <view class='comment'>
+      <view>
+        <image src='../../img/article/comment.png' class='img'></image>
+      </view>
+      <view class='textview'>
+        <text class='smalltext'>10000</text>
+      </view>
+    </view>
+    <view class='share'>
+      <image src='../../img/article/star.png' class='img'></image>
+    </view>
+  </view>
+
+  <view class="selection">
+    <block wx:for="{{list}}" wx:for-index="id">
+      <view class="item" bindtap='clickItem'>
+        <navigator url='/pages/personalMessage/personalMessage'>
+          <view class="item-left">
+            <view class="subitemimg">
+              <image src="../../img/header/gg.png" class="item-image"></image>
+            </view>
+          </view>
+        </navigator>
+        <view class="item-right">
+          <view class="subitemtext">
+            <view class="subsubitem">
+              <view>
+                <text class="item-title">庄潮坚</text>
+                <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                <text class="item-title smalltext">吉林大学</text>
+              </view>
+              <view>
+                <text class="littletext">写的不错</text>
+              </view>
+            </view>
+            <view class='bottom-item'>
+              <view class='bottom-item-left'>
+                <text class='smalltext'>{{id+1}}楼</text>
+                <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+                <text class='smalltext'>{{date}}</text>
+              </view>
+              <view class='bottom-item-right'>
+                <image class='heart-img' src='../../img/heart.png'></image>
+                <text class='smalltext'>0</text>
+                <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                <image class='heart-img' src='../../img/command.png'></image>
+                <text class='smalltext'>0</text>
+              </view>
+
+
+            </view>
+          </view>
+
+
+
+        </view>
+
+      </view>
+    </block>
+  </view>
+</view>

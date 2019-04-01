@@ -1,0 +1,92 @@
+<view class='page-IDchange'>
+  <view class='user'>
+    <view class='user-img'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class='text'>
+      <view class='text-item'>
+        <text class="textcss">{{userInfo.nickName}}</text>
+      </view>
+      <view class='text-item'>
+        <text class="textcss">等级：{{level}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='work'>
+    <view class='title'>
+      <text>工作经历</text>
+    </view>
+    <view class='detail'>
+      <view>
+        <text>{{company}}</text>
+      </view>
+      <view>
+        <text>{{work}}</text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+        <text>{{workTime}}</text>
+      </view>
+      <view>
+        <text>{{depart}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='stu'>
+    <view class='title'>
+      <text>教育经历</text>
+    </view>
+    <view class='detail'>
+      <view>
+        <text>{{school}}</text>
+      </view>
+      <view>
+        <text>{{stu}}</text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+        <text>{{stuDate}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='jobWanted'>
+    <view class='title-job'>
+      <text>Ta发布的职位</text>
+    </view>
+    <view class="selection">
+      <block wx:for="{{list}}" wx:for-index="id">
+        <view class="item" bindtap='clickItemStu'>
+
+          <view class="item-left">
+            <view class="subitemimg">
+              <image src="{{item.img}}" class="item-image"></image>
+            </view>
+
+            <view class="subitemtext">
+              <view>
+                <text class="item-title">{{item.reType}}</text>
+              </view>
+              <view>
+                <text class="item-title smalltext">{{item.place}}|{{item.edu}}|{{item.stuEdu}}</text>
+              </view>
+              <view>
+                <text class="item-title smalltext">{{item.company}}</text>
+              </view>
+              <view>
+                <text class="item-title smalltext">{{item.pay}}</text>
+                <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+                <text class="item-title smalltext">{{item.workTime}}</text>
+              </view>
+            </view>
+
+          </view>
+          <view class="item-center">
+
+          </view>
+          <view class="item-right smalltext">
+            <view>
+              <text>{{item.date}}</text>
+            </view>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

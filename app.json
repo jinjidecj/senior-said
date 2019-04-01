@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/chooseIdentity/chooseIdentity",
+    "pages/recruitment/recruitment",
+    "pages/society/society",
+    "pages/new/new",
+    "pages/dailyNews/dailyNews",
+    "pages/test/test",
+    "pages/personalMessage/personalMessage",
+    "pages/article/article",
+    "pages/chat/chat",
+    "pages/myFeedback/myFeedback",
+    "pages/myIDChange/myIDChange",
+    "pages/myDelivery/myDelivery",
+    "pages/myWorkCollection/myWorkCollection",
+    "pages/myResume/myResume",
+    "pages/myArticle/myArticle",
+    "pages/myQaA/myQaA",
+    "pages/myfocus/myfocus",
+    "pages/chatEmp/chatEmp",
+    "pages/chatStu/chatStu",
+    "pages/workDetailStu/workDetailStu",
+    "pages/editArticle/editArticle",
+    "pages/editQuestion/editQuestion",
+    "pages/searchArticle/searchArticle",
+    "pages/workDetailEmp/workDetailEmp",
+    "pages/inputStu/inputStu",
+    "pages/logs/logs",
+    "pages/inputEmp/inputEmp",
+    "pages/reContent/reContent"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "前辈职说",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/society/society",
+        "iconPath": "img/bar/职说.png",
+        "selectedIconPath": "img/bar/职说(1).png",
+        "text": "职说"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "img/bar/聊天.png",
+        "selectedIconPath": "img/bar/聊天(1).png",
+        "text": "聊天"
+      },
+      {
+        "pagePath": "pages/recruitment/recruitment",
+        "iconPath": "img/bar/招聘.png",
+        "selectedIconPath": "img/bar/招聘(1).png",
+        "text": "招聘"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "img/bar/我的.png",
+        "selectedIconPath": "img/bar/我的(1).png",
+        "text": "我的"
+      }
+    ]
+  }
+}

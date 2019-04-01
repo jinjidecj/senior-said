@@ -1,0 +1,71 @@
+<view class='page' >
+  <view>
+    <view class="weui-cells__title">基本信息</view>
+        <view class="weui-cells weui-cells_after-title">
+
+           
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="点击填写姓名"/>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">学校</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="点击填写学校"/>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">专业</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="点击填写专业"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">学位</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="点击填写学位"/>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">毕业时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+                </view>
+            </view>
+            
+             <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">求职意向</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="点击填写求职意向"/>
+                </view>
+            </view>
+            
+        </view>
+        <view class='stuBtu'>
+           <button class="weui-btn" size="mini" type="primary" plain="true"  bindtap="confimBtu">确定</button>
+        </view>
+        <view class="weui-cells__tips">提示：请尽快完善个人信息</view>
+  </view>
+  <view>
+
+  </view>
+</view>

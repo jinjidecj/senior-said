@@ -1,0 +1,79 @@
+@import "../recruitment/recruitment.wxss";
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.user-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 270rpx;
+  border-bottom: solid 1rpx #e0e0e0;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text-item {
+  padding: 10rpx;
+}
+
+.textcss {
+  font-size: 14px;
+  color: #999;
+}
+
+.content {
+  padding: 50rpx 50rpx 50rpx 50rpx;
+}
+
+.button-css {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.work {
+  padding: 20rpx 50rpx 20rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1rpx #e0e0e0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail {
+  font-size: 14px;
+  color: #787878;
+}
+
+.stu {
+  padding: 20rpx 50rpx 20rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1rpx #e0e0e0;
+}
+.jobWanted{
+  padding: 20rpx 0rpx 20rpx 0rpx;
+  display: flex;
+  flex-direction: column;
+}
+.title-job{
+    font-size: 16px;
+  font-weight: bold;
+   padding: 0rpx 50rpx 10rpx 50rpx;
+}

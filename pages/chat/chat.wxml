@@ -1,0 +1,39 @@
+<view class="contain">
+  <view class="selection">
+    <view wx:for="{{list}}" wx:key="key">
+      <view class="item" bindtap='clickItem' data-id="{{item}}">
+
+        <view class="item-left">
+          <view class="subitemimg">
+            <image src="{{item.img}}" class="item-image"></image>
+          </view>
+
+          <view class="subitemtext">
+            <view class="subsubitem">
+              <view>
+                <text class="item-title">{{item.fromWho}}</text>
+              </view>
+              <view>
+                <text class="item-title smalltext">{{item.content}}</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <view class="item-center">
+
+        </view>
+        <view class="item-right smalltext">
+          <text>{{item.time}}</text>
+          <view class='item-right-s'>
+
+          </view>
+          <view class='item-right-s'>
+            <image src='{{item.isRead}}' class='item-right-s'></image>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

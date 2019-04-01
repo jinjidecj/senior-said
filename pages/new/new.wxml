@@ -1,0 +1,26 @@
+<view class='page-new'>
+  <view class='top'>
+    <view class='title'>
+      <text>{{title}}</text>
+    </view>
+    <view class='detail'>
+      <view class='detail-item-date'>
+        <text>{{date}}</text>
+      </view>
+       <view class='detail-item'>
+        <text>来源：{{resource}}</text>
+      </view>
+       <view class='detail-item'>
+        <text>作者：{{author}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='essay'>
+    <view>
+    <text>{{essay}}</text>
+    </view>
+  </view>
+  <view class='img-buttom'>
+    <image src='{{img}}' class='img-item' mode='aspectFit'></image>
+  </view>
+</view>

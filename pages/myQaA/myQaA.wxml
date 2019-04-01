@@ -1,0 +1,34 @@
+<view>
+  <scroll-view scroll-x='true' class='tab-h' scroll-left='{{scrollLeft}}'>
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">问题</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">回答</view>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:for="{{question}}" wx:key="*this">
+          <view class="item">
+            <view>
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:for="{{answer}}" wx:key="*this">
+          <view class="item-answer">
+            <view>
+              <text class='hardText'>问：{{item.question}}</text>
+            </view>
+            <view>
+              <text>{{item.answer}}</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

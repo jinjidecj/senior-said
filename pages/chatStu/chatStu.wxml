@@ -1,0 +1,65 @@
+<view>
+  <view class="historycon">
+    <scroll-view class='scroll-view'>
+      <view>
+        <view class='time'>2018-8-8 13:50</view>
+      </view>
+      <block wx:for="{{chatMessages}}" wx:for-index="id">
+        <view class='chat-right' style="height:100rpx" wx:if="{{item.isme>0}}">
+          <navigator url='/pages/personalMessage/personalMessage'>
+            <view class='user-img'>
+              <image src='../../img/header/aa.png' class='user-img-item'></image>
+            </view>
+          </navigator>
+          <view class='chat-content'>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+
+        <view class='chat-left' style="height:{{height}}rpx" wx:else>
+        <navigator url='/pages/personalMessage/personalMessage'>
+          <view class='user-img'>
+            <image src='../../img/header/ss.png' class='user-img-item'></image>
+          </view>
+          </navigator>
+          <view class='chat-content' style=' width:450rpx'>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<view class="button-view">
+  <view class='sendMessage'>
+
+    <view class='message'>
+      <view class="message-text">
+        <input class="weui-input" value="{{sendCont}}" name="inputcontent" bindinput='inputCon' />
+      </view>
+    </view>
+
+    <view class='send'>
+      <image src='../../img/chat/send.png' class='send-img' bindtap='send'></image>
+    </view>
+  </view>
+  <view class='little-function'>
+    <view class='function-item'>
+      <image src='../../img/chat/voice.png' class='function-img'></image>
+    </view>
+    <view class='function-item'>
+      <image src='../../img/chat/picture.png' class='function-img'></image>
+    </view>
+    <view class='function-item'>
+      <image src='../../img/chat/link.png' class='function-img'></image>
+    </view>
+    <view class='function-item'>
+      <image src='../../img/chat/find.png' class='function-img'></image>
+    </view>
+    <view class='function-item'>
+      <image src='../../img/chat/emoj.png' class='function-img'></image>
+    </view>
+
+  </view>
+</view>

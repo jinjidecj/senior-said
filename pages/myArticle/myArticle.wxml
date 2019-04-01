@@ -1,0 +1,30 @@
+<view class='page-myarticle'>
+  <view class='article-list' wx:for='{{myarticle}}'>
+    <view class='article'>
+      <view class='title'>
+        <text class='hardText'>{{item.title}}</text>
+      </view>
+      <view class='bottom'>
+        <view class='bottom-left'>{{item.date}}</view>
+        <view class='bottom-right'>
+          <view class='love'>
+            <view>
+              <image src='../../img/article/heart.png' class='img'></image>
+            </view>
+            <view class='textview'>
+              <text class='smalltext'>{{item.love}}</text>
+            </view>
+          </view>
+          <view class='comment'>
+            <view>
+              <image src='../../img/article/comment.png' class='img'></image>
+            </view>
+            <view class='textview'>
+              <text class='smalltext'>{{item.commandSum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

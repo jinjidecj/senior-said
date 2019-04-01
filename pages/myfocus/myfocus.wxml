@@ -1,0 +1,25 @@
+<view class='page-myfocus'>
+  <view class='items' wx:for='{{myfocus}}'>
+
+      <view class='items-i' bindtap='clickitem'>
+        <view class="item-left">
+          <view class="subitemimg">
+            <image src="{{item.img}}" class="item-image"></image>
+          </view>
+          <view class="subitemtext">
+            <view class="subsubitem">
+              <view>
+                <text class="item-title">{{item.name}}</text>
+              </view>
+              <view>
+                <text class="item-title smalltext">{{item.company}}-{{item.work}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='item-right'>
+          <image src='../../img/my/hasFocus.png' class='item-right-s'></image>
+        </view>
+      </view>
+  </view>
+</view>

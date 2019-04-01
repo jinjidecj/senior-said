@@ -1,0 +1,28 @@
+<view class='page-IDchange'>
+  <view class='user'>
+    <view>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class='text'>
+      <view class='text-item'>
+        <text class="textcss">{{userInfo.nickName}}</text>
+      </view>
+      <view class='text-item'>
+        <text class="textcss">等级：{{level}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view>1.点击确认修改后可上传正式工作的工作证明（非实习期）</view>
+
+    <view>2.上传完成后等待审核，积分达到1500并审核通过即可更改身份，正式进入职场等级阶段</view>
+
+    <view>3.更改身份成功后即可享受带领新人，更亲密的分享经验，成为师徒后可增加积分</view>
+
+    <view>4.点赞权重更大，更加值得他人信赖</view>
+  </view>
+
+  <view class='button-css'>
+   <button type="primary" plain="true" bindtap="">确认更改</button>
+  </view>
+</view>

@@ -1,0 +1,149 @@
+<!--index.wxml-->
+<view wx:if="{{identity<2}}" class="mycontainer">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <view class='level'>
+      <text class="userinfo-nickname">等级积分:</text>
+      <text style='color:blue'>{{level}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+      <text class="userinfo-nickname">获赞:</text>
+      <text style='color:blue'>{{goods}}</text>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url='/pages/myfocus/myfocus'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myfocus.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的关注</view>
+      </view>
+    </navigator>
+    <navigator url='/pages/myQaA/myQaA'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myquestion.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的问答</view>
+      </view>
+    </navigator>
+    <navigator url='/pages/myArticle/myArticle'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myarticle.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的文章</view>
+      </view>
+    </navigator>
+    <navigator url='/pages/myResume/myResume'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/resume.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">附件简历</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/myDelivery/myDelivery'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/deliver.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的投递</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/myWorkCollection/myWorkCollection'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/collection.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">职位收藏</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/myIDChange/myIDChange'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/identity.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">更改身份</view>
+      </view>
+    </navigator>
+
+
+    <navigator url='/pages/myFeedback/myFeedback'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/feedback.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">反馈建议</view>
+      </view>
+    </navigator>
+
+
+
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
+<view wx:else class="mycontainer">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <view class='level'>
+      <text class="userinfo-nickname">等级积分:</text>
+      <text style='color:blue'>{{level}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+      <text class="userinfo-nickname">获赞:</text>
+      <text style='color:blue'>{{goods}}</text>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url='/pages/myfocus/myfocus'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myfocus.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的关注</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/myQaA/myQaA'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myquestion.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的问答</view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/myArticle/myArticle'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/myarticle.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">我的文章</view>
+      </view>
+    </navigator>
+
+
+    <navigator url='/pages/myFeedback/myFeedback'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../img/my/feedback.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">反馈建议</view>
+      </view>
+    </navigator>
+
+  </view>
+</view>

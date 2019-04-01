@@ -1,0 +1,33 @@
+<view class='page'>
+  <view class="section">
+    <image class='img' src='../../img/start.png'> </image>
+  </view>
+  <view class="page__bd">
+    <view class="weui-panel">
+      <view class="weui-panel__bd">
+        <view class="items" bindtap='clickStu'>
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../img/student.png"></image>
+          </view>
+
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">大学生端</view>
+            <view class="weui-media-box__desc">求职的路上我需要成长</view>
+          </view>
+        </view>
+
+        <view class="items" bindtap='clickEmp'>
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../img/employee.png"></image>
+          </view>
+
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">前辈、HR端</view>
+            <view class="weui-media-box__desc">求职的路上我来为你助力</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

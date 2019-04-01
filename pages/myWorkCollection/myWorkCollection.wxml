@@ -1,0 +1,39 @@
+<view class="selection">
+  <block wx:for="{{list}}" wx:for-index="id">
+    <view class="item" bindtap='clickItemStu'>
+
+      <view class="item-left">
+        <view class="subitemimg">
+          <image src="{{item.img}}" class="item-image"></image>
+        </view>
+
+        <view class="subitemtext">
+          <view>
+            <text class="item-title">{{item.reType}}</text>
+          </view>
+          <view>
+            <text class="item-title smalltext">{{item.place}}|{{item.edu}}|{{item.stuEdu}}</text>
+          </view>
+          <view>
+            <text class="item-title smalltext">{{item.company}}</text>
+          </view>
+          <view>
+            <text class="item-title smalltext">{{item.pay}}</text>
+            <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text class="item-title smalltext">{{item.workTime}}</text>
+          </view>
+        </view>
+
+      </view>
+      <view class="item-center">
+
+      </view>
+      <view class="item-right smalltext">
+        <view>
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+
+    </view>
+  </block>
+</view>

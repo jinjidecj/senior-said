@@ -1,0 +1,12 @@
+<view class='page-myresume'>
+  <view class='notice-text'>
+    <text class='smalltext'>还没有简历，点击下方按钮上传吧</text>
+  </view>
+  <view class='button-view'>
+  <view>
+   <button type="primary" plain="true" bindtap="">上传简历</button>
+  </view>
+    
+  </view>
+
+</view>

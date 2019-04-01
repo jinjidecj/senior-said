@@ -1,0 +1,64 @@
+.article-list{
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #d0d0d0;
+  border-radius: 5px;
+  height: 120rpx;
+}
+.article{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  padding: 10rpx;
+}
+.hardText{
+  font-size: 18px;
+  font-weight: bold;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.love{
+  width: 130rpx;
+  height: 50rpx;
+  padding-left: 0rpx;
+  display: flex;
+  flex-direction: row;
+}
+.img{
+  width: 50rpx;
+  height: 50rpx;
+}
+.comment{
+  width:120rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.textview{
+  padding: 10rpx 10rpx 5rpx 0;
+}
+.smalltext {
+  font-size: 14px;
+  color: #787878;
+}
+.bottom-left{
+  width: 200rpx;
+  padding: 10rpx 10rpx 5rpx 10rpx;
+}
+.bottom-right{
+  display: flex;
+  flex-direction: row;
+  width: 300rpx;
+  justify-content: space-between;
+}
