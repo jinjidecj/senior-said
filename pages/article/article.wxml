@@ -66,7 +66,7 @@
           <view class="subitemtext">
             <view class="subsubitem">
               <view>
-                <text class="item-title">庄潮坚</text>
+                <text class="item-title">庄同学</text>
                 <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
                 <text class="item-title smalltext">吉林大学</text>
               </view>

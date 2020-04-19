@@ -10,9 +10,9 @@ Page({
     tabs: ["前辈内推", "HR招聘"],
     identity:0,
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      '../../img/recruitment/1.jpg',
+      '../../img/recruitment/2.jpg',
+      '../../img/recruitment/3.jpg',
     ],
     indicatorDots: true,
     autoplay: true,

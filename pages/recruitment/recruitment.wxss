@@ -340,6 +340,7 @@ tab-item {
 .weui-tab {
   position: relative;
   height: 100%;
+  /* overflow: hidden; */
 }
 .weui-navbar {
   display: -webkit-box;
